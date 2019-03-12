@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include "Transform.h"
+//#include "Transform.h"
+
 using namespace std;
 
 //class for card. 
@@ -8,12 +10,12 @@ class Card
 {
 public:
 	Card();
-	Card(float, float);
+	Card(int, int);
 	~Card();
 	//State getcurrentstate();
 
-	float x;
-	float y;
+	int x;
+	int y;
 	string title;
 	string subtitle;
 	string body;
@@ -24,6 +26,7 @@ public:
 	bool isClicked;
 	bool isFront;
 	bool isShown;
+	void setpos(int x, int y);
 
 	/*
 	string rubrik
