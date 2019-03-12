@@ -1,10 +1,10 @@
 #pragma once
 #include "card.h"
+#include "Path.h"
 //#include <hash_map>
 #include <map>
 //container class for card
-class Cards :
-	public Card
+class Cards 
 {
 public:
 	Cards();
@@ -12,7 +12,7 @@ public:
 	void sort();
 	void categorize();
 	void collision();
-	void setPath(Card inst);
+	void setPath(Card &inst);
 	void search();
 	
 	//Card allcards[];

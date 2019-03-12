@@ -1,14 +1,17 @@
 #pragma once
-#include <glm/vec3.hpp> // glm::vec3
+#include "cinder/gl/gl.h"	//glm::vec3
+#include <vector>
 
-const int NUMBEROFCOORDINATES = 10;
+using namespace std;
+
+const int NUMCOORDS = 10;
 class Path
 {
 public:
 	Path();
 	~Path();
 private:
-	glm::vec3 coordinate[NUMBEROFCOORDINATES];
+	glm::vec3 coordinates[NUMCOORDS];
 	int velocity;
 
 };

@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
+#include "Transform.h"
 using namespace std;
+
 //class for card. 
 class Card
 {
