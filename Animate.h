@@ -7,6 +7,8 @@ public:
 	Animate();
 	~Animate();
 
+	int test;
+
 	void newPage();
 	void turnCard();
 	void move();
