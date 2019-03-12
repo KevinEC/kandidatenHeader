@@ -18,16 +18,7 @@ public:
 	~Path();
 private:
 	int velocity;
-	glm::vec3 coord;
-	glm::vec3 coordarray[NUMBEROFCOORDINATES];
-
-
-	
-	//vec3 testvec;
-	//vec3 coord[NUMBEROFCOORDINATES];
-
-	//Card allcards[2];
-	//glm::vec3 coord[2];
+	glm::vec3 coord[NUMCOORDS];
 	
 };
 

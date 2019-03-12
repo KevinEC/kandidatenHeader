@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "Transform.h"
+//#include "Transform.h"
 //#include "Transform.h"
 
 using namespace std;
@@ -26,7 +26,7 @@ public:
 	bool isClicked;
 	bool isFront;
 	bool isShown;
-	void setpos(int x, int y);
+	void setpos(int m, int n);
 
 	/*
 	string rubrik

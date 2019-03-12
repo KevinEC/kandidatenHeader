@@ -17,7 +17,7 @@ public:
 	void search();
 	
 
-	Card allcards[2];
+//	Card allcards[2];
 	Card testkort;
 	//hash_map<string, card[]> categories;'
 		
