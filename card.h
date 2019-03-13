@@ -1,21 +1,33 @@
 #pragma once
 #include <string>
+#include "cinder/app/MouseEvent.h"
+#include "cinder/app/App.h"
+//#include "cinder/Area.h"
 //#include "Transform.h"
 //#include "Transform.h"
 
+using namespace ci; 
+using namespace ci::app;
 using namespace std;
+
+
 
 //class for card. 
 class Card
 {
 public:
 	Card();
-	Card(int, int);
+	Card(int, int, const int, const int);
 	~Card();
 	//State getcurrentstate();
+	void mouseDrag(MouseEvent event);
+	void mouseDown(MouseEvent event);
 
 	int x;
 	int y;
+	Rectf rect;
+	int width;
+	int height;
 	string title;
 	string subtitle;
 	string body;
@@ -38,4 +50,6 @@ public:
 	*/
 
 	//State currentstate;
+
+	bool mPressed;
 };

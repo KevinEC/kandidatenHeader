@@ -11,6 +11,7 @@ public:
 	void scale();
 	void rotate();
 	static void translate(Card &kort);
+	static void translate(Card &kort, const int x, const int y);
 private:
 	//Animate animation = Animate();
 };
