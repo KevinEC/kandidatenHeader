@@ -2,7 +2,7 @@
 #include "Animate.h"
 #include "Cards.h"
 #include "Card.h"
-class Transform 
+class Transform
 {
 public:
 	Transform(); //default constructor
@@ -15,4 +15,3 @@ public:
 private:
 	//Animate animation = Animate();
 };
-

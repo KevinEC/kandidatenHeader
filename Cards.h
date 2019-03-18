@@ -5,7 +5,7 @@
 #include <map>
 #include "Path.h"
 //container class for card
-class Cards 
+class Cards
 {
 public:
 	Cards();
@@ -15,14 +15,14 @@ public:
 	void collision();
 	void setPath(Card &inst);
 	void search();
-	
 
-//	Card allcards[2];
+
+	//	Card allcards[2];
+
 	Card testkort;
 	Card rectKort;
 	//hash_map<string, card[]> categories;'
-		
-	
+
+
 
 };
-
