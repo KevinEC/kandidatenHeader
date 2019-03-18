@@ -1,6 +1,5 @@
 #pragma once
 #include "Animate.h"
-#include "Cards.h"
 #include "Card.h"
 class Transform
 {
@@ -10,8 +9,10 @@ public:
 
 	void scale();
 	void rotate();
-	static void translate(Card &kort);
-	static void translate(Card &kort, const int x, const int y);
+	void translate(Card &kort);
+	void translate(Card &kort, const int x, const int y);
 private:
 	//Animate animation = Animate();
+	float deltaX;
+	float deltaY;
 };

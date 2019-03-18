@@ -4,7 +4,7 @@
 #include "cinder/app/App.h"
 #include "cinder/Log.h"
 //#include "cinder/Area.h"
-//#include "Transform.h"
+#include "Transform.h"
 
 
 using namespace ci;
@@ -38,8 +38,12 @@ public:
 	double cardSize;
 	int pathID;
 	bool isClicked;
+	bool isDragged;
 	bool isFront;
 	bool isShown;
+
+	Transform transform;
+
 	void setpos(int m, int n);
 
 	/*
