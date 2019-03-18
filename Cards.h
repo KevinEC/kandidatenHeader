@@ -3,7 +3,6 @@
 #include "Path.h"
 //#include <hash_map>
 #include <map>
-#include "Path.h"
 //container class for card
 class Cards
 {
