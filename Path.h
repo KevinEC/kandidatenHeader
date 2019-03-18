@@ -1,7 +1,7 @@
 #pragma once
 #include "cinder/gl/gl.h"	//glm::vec3
 #include <vector>
-#include "Cards.h"
+//#include <glm/vec3.hpp> // glm::vec3
 
 
 using namespace std;

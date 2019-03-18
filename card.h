@@ -1,8 +1,11 @@
 #pragma once
-#include <string>
+#include "Transform.h"
+
 #include "cinder/app/MouseEvent.h"
 #include "cinder/app/App.h"
 #include "cinder/Log.h"
+
+#include <string>
 
 using namespace ci;
 using namespace ci::app;
@@ -15,18 +18,18 @@ class Card
 {
 public:
 	Card();
-	Card(int, int, const int, const int);
+	Card(float, float, const float, const float);
 	~Card();
 	void update();
 	//State getcurrentstate();
 	void mouseDrag(MouseEvent event);
 	void mouseDown(MouseEvent event);
 
-	int x;
-	int y;
+	float x;
+	float y;
 	Rectf rect;
-	int width;
-	int height;
+	float width;
+	float height;
 	string title;
 	string subtitle;
 	string body;
@@ -35,9 +38,13 @@ public:
 	double cardSize;
 	int pathID;
 	bool isClicked;
+	bool isDragged;
 	bool isFront;
 	bool isShown;
-	void setpos(int m, int n);
+
+	Transform transform;
+
+	void setpos(float m, float n);
 
 	/*
 	string rubrik
