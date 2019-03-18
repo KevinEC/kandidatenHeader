@@ -7,6 +7,7 @@
 //#include "Transform.h"
 //#include "Transform.h"
 
+
 using namespace ci;
 using namespace ci::app;
 using namespace std;
@@ -53,4 +54,6 @@ public:
 	//State currentstate;
 
 	bool mPressed;
+
 };
+

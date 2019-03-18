@@ -18,6 +18,7 @@ public:
 
 
 	//	Card allcards[2];
+
 	Card testkort;
 	Card rectKort;
 	//hash_map<string, card[]> categories;'
