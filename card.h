@@ -3,10 +3,6 @@
 #include "cinder/app/MouseEvent.h"
 #include "cinder/app/App.h"
 #include "cinder/Log.h"
-//#include "cinder/Area.h"
-//#include "Transform.h"
-//#include "Transform.h"
-
 
 using namespace ci;
 using namespace ci::app;

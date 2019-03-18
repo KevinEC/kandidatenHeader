@@ -4,7 +4,7 @@
 class Story
 {
 public:
-	Story(); ////default constructor
+	Story(); //default constructor
 	Story(Cards cards);
 	~Story();
 
