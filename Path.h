@@ -4,7 +4,6 @@
 //#include <glm/vec3.hpp> // glm::vec3
 
 
-
 using namespace std;
 
 const int NUMCOORDS = 10;
