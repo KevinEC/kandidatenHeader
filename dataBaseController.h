@@ -18,7 +18,6 @@ public:
 	dataBaseController(std::string fileLocation, std::string inFileType, std::string url);
 	~dataBaseController();
 	
-
 	std::string fileType;
 	std::string fileLocation;
 	
