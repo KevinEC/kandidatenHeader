@@ -23,6 +23,13 @@ public:
 
 	ci::XmlTree * tree;
 	ci::XmlTree * establishConnection(std::string url);
+	
+	std::string fileType;
+	std::string fileLocation;
+	
+	ci::XmlTree * tree;
+	ci::XmlTree * establishConnection(std::string url); 
+
 	void extractCategories(std::vector <std::string > & categories);
 	void extractTitles(std::vector<std::string> & titles);
 	void extractBodies(std::vector<std::string> & bodyText);
