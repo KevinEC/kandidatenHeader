@@ -16,13 +16,10 @@ public:
 	void setPath(Card &inst);
 	void search();
 
-
 	//	Card allcards[2];
 
 	Card testkort;
 	Card rectKort;
 	//hash_map<string, card[]> categories;'
-
-
 
 };

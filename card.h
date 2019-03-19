@@ -1,10 +1,8 @@
 #pragma once
 #include "Transform.h"
-
 #include "cinder/app/MouseEvent.h"
 #include "cinder/app/App.h"
 #include "cinder/Log.h"
-
 #include <string>
 
 using namespace ci;
