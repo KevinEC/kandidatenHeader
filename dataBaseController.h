@@ -13,13 +13,14 @@ class dataBaseController
 {
 public:
 	dataBaseController();
-	dataBaseController(std::string fileLocation, std::string inFileType, std::string filename);
+	dataBaseController(std::string fileLocation, std::string inFileType, std::string url);
 	~dataBaseController();
 
 	std::string fileType;
 	std::string fileLocation;
 	ci::XmlTree * tree;
-	ci::XmlTree* establishConnection(std::string url); //
 
+	ci::XmlTree* establishConnection(std::string url); //
+	
 };
 
