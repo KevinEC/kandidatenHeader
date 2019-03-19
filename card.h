@@ -4,6 +4,11 @@
 #include "cinder/app/MouseEvent.h"
 #include "cinder/app/App.h"
 #include "cinder/Log.h"
+#include "cinder/svg/SvgGl.h"
+#include "cinder/svg/Svg.h"
+
+#include "cinder/Text.h"
+#include "cinder/gl/Texture.h"
 
 #include <string>
 
@@ -28,7 +33,6 @@ public:
 
 	float x;
 	float y;
-	Rectf rect;
 	float width;
 	float height;
 	string title;
@@ -43,10 +47,14 @@ public:
 	bool isFront;
 	bool isShown;
 
+	Rectf rect;
 	Transform transform;
+	gl::TextureRef text;
+	gl::TextureRef cardBg;
 
 	void setpos(float m, float n);
-
+	void renderTexture();
+	void initSvg();
 	/*
 	string rubrik
 	string brödtext
@@ -56,8 +64,5 @@ public:
 	*/
 
 	//State currentstate;
-
-	bool mPressed;
-
 };
 
