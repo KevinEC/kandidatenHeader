@@ -24,6 +24,7 @@ public:
 	//State getcurrentstate();
 	void mouseDrag(MouseEvent event);
 	void mouseDown(MouseEvent event);
+	void mouseUp(MouseEvent event);
 
 	float x;
 	float y;
