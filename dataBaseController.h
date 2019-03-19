@@ -22,17 +22,11 @@ public:
 	std::string fileLocation;
 
 	ci::XmlTree * tree;
-	ci::XmlTree * establishConnection(std::string url);
-	
-	std::string fileType;
-	std::string fileLocation;
-	
-	ci::XmlTree * tree;
-	ci::XmlTree * establishConnection(std::string url); 
+	ci::XmlTree * establishConnection(std::string url);	
 
 	void extractCategories(std::vector <std::string > & categories);
 	void extractTitles(std::vector<std::string> & titles);
 	void extractBodies(std::vector<std::string> & bodyText);
 	void extractImgPaths(std::vector<std::string> & imgPath);
-	void extractCardCats(std::vector<std::string> & cardCategory); // needs extension to extract ALL categories of a card 
+	void extractCardCats(std::vector<std::vector<std::string> > & cardCategory); // needs extension to extract ALL categories of a card 
 };
