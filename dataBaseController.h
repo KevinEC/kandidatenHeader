@@ -19,12 +19,10 @@ public:
 
 	std::string fileType;
 	std::string fileLocation;
+	
 	ci::XmlTree * tree;
-
 	ci::XmlTree* establishConnection(std::string url); 
 
-
-	ci::XmlTree* establishConnection(std::string url); //
 	
 };
 
