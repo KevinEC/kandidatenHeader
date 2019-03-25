@@ -1,13 +1,12 @@
 #pragma once
 #include "Transform.h"
 #include "cinder/app/MouseEvent.h"
+#include "cinder/app/TouchEvent.h"
 #include "cinder/app/App.h"
 #include "cinder/Log.h"
-
 #include "cinder/svg/SvgGl.h"
 #include "cinder/svg/Svg.h"
 #include "cinder/cairo/Cairo.h"
-
 #include "cinder/Text.h"
 #include "cinder/gl/Texture.h"
 #include <string>
@@ -15,8 +14,6 @@
 using namespace ci;
 using namespace ci::app;
 using namespace std;
-
-
 
 //class for card. 
 class Card
@@ -30,6 +27,10 @@ public:
 	void mouseDrag(MouseEvent event);
 	void mouseDown(MouseEvent event);
 	void mouseUp(MouseEvent event);
+
+	void touchesBegan(TouchEvent event);
+	void touchesMoved(TouchEvent event);
+	void touchesEnded(TouchEvent event);
 
 	float x;
 	float y;
