@@ -48,6 +48,9 @@ public:
 	bool isFront;
 	bool isShown;
 
+	TouchEvent::Touch lastTouch;
+	bool twoTouches;
+
 	Rectf rect;
 	Transform transform;
 	gl::TextureRef text;
