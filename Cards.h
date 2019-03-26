@@ -9,6 +9,7 @@ class Cards
 {
 public:
 	Cards();
+	Cards(std::vector<std::pair<std::string, std::string>>* titles, std::vector<std::pair<std::string, std::string>>* bodyText);
 	~Cards();
 	void sort();
 	void categorize();
