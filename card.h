@@ -6,7 +6,7 @@
 #include "cinder/Log.h"
 #include "cinder/svg/SvgGl.h"
 #include "cinder/svg/Svg.h"
-#include "cinder/cairo/Cairo.h"
+	#include "cinder/cairo/Cairo.h"
 #include "cinder/Text.h"
 #include "cinder/gl/Texture.h"
 #include <string>
@@ -56,6 +56,7 @@ public:
 	void setpos(float m, float n);
 	void renderTexture();
 	void initSvg();
+	gl::Texture createElement(svg::Node* element);
 	/*
 	string rubrik
 	string brödtext
