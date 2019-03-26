@@ -8,6 +8,7 @@
 #include "cinder/svg/Svg.h"
 #include "cinder/cairo/Cairo.h"
 #include "cinder/Text.h"
+#include "cinder/Font.h"
 #include "cinder/gl/Texture.h"
 #include <string>
 
@@ -41,7 +42,7 @@ public:
 	string body;
 	//image img[];
 	//Rectf rect;
-	double cardSize;
+	float cardSize;
 	int pathID;
 	bool isClicked;
 	bool isDragged;
@@ -56,6 +57,9 @@ public:
 	vec2 bodyCo;
 	vec2 tagsCo;
 
+	float elementWidth;
+	float paddingX;
+
 	gl::TextureRef imgTex;
 	gl::TextureRef titleTex;
 	gl::TextureRef bodyTex;
@@ -64,6 +68,7 @@ public:
 	void setpos(float m, float n);
 	gl::TextureRef renderTexture(TextBox &text);
 	void initElements();
+	void updateElementCoords();
 	/*
 	string rubrik
 	string brödtext
