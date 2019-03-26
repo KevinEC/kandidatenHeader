@@ -6,7 +6,7 @@
 #include "cinder/Log.h"
 #include "cinder/svg/SvgGl.h"
 #include "cinder/svg/Svg.h"
-	#include "cinder/cairo/Cairo.h"
+#include "cinder/cairo/Cairo.h"
 #include "cinder/Text.h"
 #include "cinder/gl/Texture.h"
 #include <string>
@@ -20,7 +20,7 @@ class Card
 {
 public:
 	Card();
-	Card(float, float, const float, const float);
+	Card(const float, const float);
 	~Card();
 	void update();
 	//State getcurrentstate();
@@ -50,13 +50,20 @@ public:
 
 	Rectf rect;
 	Transform transform;
-	gl::TextureRef text;
-	gl::TextureRef cardBg;
+
+	vec2 imgCo;
+	vec2 titleCo;
+	vec2 bodyCo;
+	vec2 tagsCo;
+
+	gl::TextureRef imgTex;
+	gl::TextureRef titleTex;
+	gl::TextureRef bodyTex;
+	gl::TextureRef tagsTex;
 
 	void setpos(float m, float n);
-	void renderTexture();
-	void initSvg();
-	gl::Texture createElement(svg::Node* element);
+	gl::TextureRef renderTexture(TextBox &text);
+	void initElements();
 	/*
 	string rubrik
 	string brödtext
