@@ -31,6 +31,7 @@ public:
 	void touchesBegan(TouchEvent event);
 	void touchesMoved(TouchEvent event);
 	void touchesEnded(TouchEvent event);
+	float initFingDist;
 
 	float x;
 	float y;
