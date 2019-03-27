@@ -25,14 +25,15 @@ public:
 	~Card();
 	void update();
 	//State getcurrentstate();
-	void mouseDrag(MouseEvent event);
+	/*void mouseDrag(MouseEvent event);
 	void mouseDown(MouseEvent event);
 	void mouseUp(MouseEvent event);
-
+	*/
 	void touchesBegan(TouchEvent event);
 	void touchesMoved(TouchEvent event);
 	void touchesEnded(TouchEvent event);
 	float initFingDist;
+	vector<TouchEvent::Touch> activeTouchesOnCard;
 
 	float x;
 	float y;
