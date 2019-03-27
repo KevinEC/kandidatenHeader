@@ -16,12 +16,12 @@ using namespace ci;
 using namespace ci::app;
 using namespace std;
 
-//class for card. 
+//class for card.
 class Card
 {
 public:
 	Card();
-	Card(const float, const float);
+	Card(const float, const float, std::string title, std::string body);
 	~Card();
 	void update();
 	//State getcurrentstate();
