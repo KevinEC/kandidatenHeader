@@ -10,6 +10,7 @@
 #include "cinder/Text.h"
 #include "cinder/Font.h"
 #include "cinder/gl/Texture.h"
+#include "cinder/GeomIo.h"
 #include <string>
 
 using namespace ci;
@@ -61,6 +62,15 @@ public:
 	vec2 bodyCo;
 	vec2 tagsCo;
 
+	Color bgColor;
+	Color borderColor;
+	float borderRadius;
+	ColorA textColor;
+	
+	DataSourceRef raleway;
+	DataSourceRef montserrat;
+
+
 	float elementWidth;
 	float paddingX;
 
@@ -71,8 +81,10 @@ public:
 
 	void setpos(float m, float n);
 	gl::TextureRef renderTexture(TextBox &text);
+	void renderCard();
 	void initElements();
 	void updateElementCoords();
+	void setStyles();
 	/*
 	string rubrik
 	string brödtext

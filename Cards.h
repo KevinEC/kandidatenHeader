@@ -17,6 +17,8 @@ public:
 	void setPath(Card &inst);
 	void search();
 
+	void renderCards();
+
 	std::vector<Card> allcards;
 
 	Card testkort;
