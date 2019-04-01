@@ -33,6 +33,7 @@ public:
 	void touchesMoved(TouchEvent event);
 	void touchesEnded(TouchEvent event);
 	float initFingDist;
+    vec2 initVec;
 	vector<TouchEvent::Touch> activeTouchesOnCard;
 
 	float x;
