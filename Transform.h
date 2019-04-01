@@ -13,6 +13,7 @@ public:
 	~Transform();
 
 	float scale(glm::vec2 v1, glm::vec2 v2);
+    float rotateCard(glm::vec2 v1, glm::vec2 v2);
 	glm::mat3 rotate(glm::vec2 v1, glm::vec2 v2);
 	void translate();
 	float * translate(const float x, const float y, const float mx, const float my, const bool isDragged);
