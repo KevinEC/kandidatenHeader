@@ -13,6 +13,7 @@ class Cards
 {
 public:
 	Cards();
+	Cards(string categorie);
 	Cards(vector<pair<string, string>>* titles, vector<pair<string, string>>* bodyText);
 	Cards(vector<pair<string, string>>* titles, vector<pair<string, string>>* bodyText, vector<pair<string, string>>* categories, vector<pair<string, string>>* cardCat, bool createAll);
 	~Cards();
