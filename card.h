@@ -36,7 +36,7 @@ public:
 
     vec2 initVec;
 	vector<TouchEvent::Touch> activeTouchesOnCard;
-    float angle;
+	float angle;
     float initAngle;
     glm::mat3 scaleMat;
     glm::mat3 transMat;
