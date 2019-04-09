@@ -66,6 +66,11 @@ public:
 	Rectf rect;
 	Transform transform;
 
+	void translate(TouchEvent::Touch touch);
+	void scaling(TouchEvent::Touch touch);
+	void rotation(TouchEvent::Touch touch);
+
+
 	vec2 imgCo;
 	vec2 titleCo;
 	vec2 bodyCo;
