@@ -38,6 +38,7 @@ public:
 	vector<TouchEvent::Touch> activeTouchesOnCard;
     float angle;
     float initAngle;
+	float initDist;
     glm::mat3 scaleMat;
     glm::mat3 transMat;
     glm::mat3 rotMat;
