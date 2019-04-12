@@ -34,6 +34,17 @@ public:
 //	void touchesEnded(TouchEvent event);
 	float initFingDist;
 
+	
+    vec2 initVec;
+//	vector<TouchEvent::Touch> activeTouchesOnCard;
+    float angle;
+    float initAngle;
+    glm::mat3 scaleMat;
+    glm::mat3 transMat;
+    glm::mat3 rotMat;
+//    TouchEvent::Touch lastTouch;
+//    TouchEvent::Touch lastRotTouch;
+
 	float x;
 	float y;
 	float width;
@@ -49,12 +60,17 @@ public:
 	bool isDragged;
 	bool isFront;
 	bool isShown;
+    bool isScaled;
 
 //	TouchEvent::Touch lastTouch;
 	bool twoTouches;
 
 	Rectf rect;
 	Transform transform;
+
+//	void translate(TouchEvent::Touch touch);
+//	void scaling(TouchEvent::Touch touch);
+//	void rotation(TouchEvent::Touch touch);
 
 	vec2 imgCo;
 	vec2 titleCo;
