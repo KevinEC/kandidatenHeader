@@ -6,7 +6,6 @@
 #include "cinder/Log.h"
 #include "cinder/svg/SvgGl.h"
 #include "cinder/svg/Svg.h"
-#include "cinder/cairo/Cairo.h"
 #include "cinder/Text.h"
 #include "cinder/Font.h"
 #include "cinder/gl/Texture.h"
@@ -30,9 +29,9 @@ public:
 	void mouseDown(MouseEvent event);
 	void mouseUp(MouseEvent event);
 
-	void touchesBegan(TouchEvent event);
-	void touchesMoved(TouchEvent event);
-	void touchesEnded(TouchEvent event);
+//	void touchesBegan(TouchEvent event);
+//	void touchesMoved(TouchEvent event);
+//	void touchesEnded(TouchEvent event);
 	float initFingDist;
 
 	float x;
@@ -51,7 +50,7 @@ public:
 	bool isFront;
 	bool isShown;
 
-	TouchEvent::Touch lastTouch;
+//	TouchEvent::Touch lastTouch;
 	bool twoTouches;
 
 	Rectf rect;
