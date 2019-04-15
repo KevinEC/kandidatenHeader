@@ -14,7 +14,6 @@ class Cards
 public:
 	Cards();
 	Cards(string categorie);
-	Cards(vector<pair<string, string>>* titles, vector<pair<string, string>>* bodyText);
 	~Cards();
 	vector<pair<string, Cards*>> categorize(vector<pair<string, string>>* titles, vector<pair<string, string>>* bodyText, vector<string>* categories, vector<vector<string>>* cardCat);
 	vector<pair<string, Cards*>>* sort(vector< pair<string, Cards*> >* sortedCards, vector<vector<string>>* cardCat,vector<pair<string, string >>* titles, vector<pair<string, string >>* bodyText);
@@ -39,10 +38,5 @@ public:
 	vector<Card*> allcards;
 	string categorie;
 	bool render;
-
-	// this should be removed
-	Card testkort;
-	Card rectKort;
-	//hash_map<string, card[]> categories;'
 
 };
