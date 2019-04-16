@@ -6,7 +6,6 @@
 #include "cinder/Log.h"
 #include "cinder/svg/SvgGl.h"
 #include "cinder/svg/Svg.h"
-#include "cinder/cairo/Cairo.h"
 #include "cinder/Text.h"
 #include "cinder/Font.h"
 #include "cinder/gl/Texture.h"
@@ -25,7 +24,7 @@ public:
 	Card(const float, const float, std::string title, std::string body);
 	~Card();
 	void update();
-	//State getcurrentstate();
+	
 	/*void mouseDrag(MouseEvent event);
 	void mouseDown(MouseEvent event);
 	void mouseUp(MouseEvent event);
@@ -51,8 +50,6 @@ public:
 	string title;
 	string subtitle;
 	string body;
-	//image img[];
-	//Rectf rect;
 	float cardSize;
 	int pathID;
 	bool isClicked;
@@ -60,7 +57,6 @@ public:
 	bool isFront;
 	bool isShown;
     bool isScaled;
-
 	bool twoTouches;
 
 	Rectf rect;
@@ -79,7 +75,6 @@ public:
 	DataSourceRef raleway;
 	DataSourceRef montserrat;
 
-
 	float elementWidth;
 	float paddingX;
 
@@ -94,14 +89,6 @@ public:
 	void initElements();
 	void updateElementCoords();
 	void setStyles();
-	/*
-	string rubrik
-	string brödtext
-	img img1
-	img img2
-	taget från xml
-	*/
 
-	//State currentstate;
 };
 
