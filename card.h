@@ -4,12 +4,19 @@
 #include "cinder/app/TouchEvent.h"
 #include "cinder/app/App.h"
 #include "cinder/Log.h"
-#include "cinder/svg/SvgGl.h"
-#include "cinder/svg/Svg.h"
 #include "cinder/Text.h"
 #include "cinder/Font.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/GeomIo.h"
+#include "cinder/app/RendererGl.h"
+#include "cinder/gl/gl.h"
+
+#include "bluecadet/views/TouchView.h"
+#include "bluecadet/views/StrokedRoundedRectView.h"
+#include "bluecadet/core/BaseApp.h"
+
+
+#include <iostream>
 #include <string>
 
 using namespace ci;
@@ -61,6 +68,8 @@ public:
 	bool isFront;
 	bool isShown;
     bool isScaled;
+
+	bluecadet::views::TouchViewRef object;
 
 //	TouchEvent::Touch lastTouch;
 	bool twoTouches;
