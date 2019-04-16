@@ -6,7 +6,6 @@
 #include "cinder/Log.h"
 #include "cinder/svg/SvgGl.h"
 #include "cinder/svg/Svg.h"
-#include "cinder/cairo/Cairo.h"
 #include "cinder/Text.h"
 #include "cinder/Font.h"
 #include "cinder/gl/Texture.h"
