@@ -4,12 +4,19 @@
 #include "cinder/app/TouchEvent.h"
 #include "cinder/app/App.h"
 #include "cinder/Log.h"
-#include "cinder/svg/SvgGl.h"
-#include "cinder/svg/Svg.h"
 #include "cinder/Text.h"
 #include "cinder/Font.h"
 #include "cinder/gl/Texture.h"
 #include "cinder/GeomIo.h"
+#include "cinder/app/RendererGl.h"
+#include "cinder/gl/gl.h"
+
+#include "bluecadet/views/TouchView.h"
+#include "bluecadet/views/StrokedRoundedRectView.h"
+#include "bluecadet/core/BaseApp.h"
+
+
+#include <iostream>
 #include <string>
 
 using namespace ci;
@@ -29,10 +36,21 @@ public:
 	void mouseDown(MouseEvent event);
 	void mouseUp(MouseEvent event);
 
-	void touchesBegan(TouchEvent event);
-	void touchesMoved(TouchEvent event);
-	void touchesEnded(TouchEvent event);
+//	void touchesBegan(TouchEvent event);
+//	void touchesMoved(TouchEvent event);
+//	void touchesEnded(TouchEvent event);
 	float initFingDist;
+
+	
+    vec2 initVec;
+//	vector<TouchEvent::Touch> activeTouchesOnCard;
+    float angle;
+    float initAngle;
+    glm::mat3 scaleMat;
+    glm::mat3 transMat;
+    glm::mat3 rotMat;
+//    TouchEvent::Touch lastTouch;
+//    TouchEvent::Touch lastRotTouch;
 
 	float x;
 	float y;
@@ -49,12 +67,19 @@ public:
 	bool isDragged;
 	bool isFront;
 	bool isShown;
+    bool isScaled;
 
-	TouchEvent::Touch lastTouch;
+	bluecadet::views::TouchViewRef object;
+
+//	TouchEvent::Touch lastTouch;
 	bool twoTouches;
 
 	Rectf rect;
 	Transform transform;
+
+//	void translate(TouchEvent::Touch touch);
+//	void scaling(TouchEvent::Touch touch);
+//	void rotation(TouchEvent::Touch touch);
 
 	vec2 imgCo;
 	vec2 titleCo;

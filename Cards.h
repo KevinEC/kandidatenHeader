@@ -1,9 +1,7 @@
 #pragma once
 #include "card.h"
 #include "Path.h"
-
-#include "cinder/app/MouseEvent.h"
-#include "cinder/app/TouchEvent.h"
+#include "bluecadet/views/BaseView.h"
 
 //#include <hash_map>
 #include <map>
@@ -24,19 +22,13 @@ public:
 	//Help functions
 	void addCard(Card *card);
 	void renderCards();
+	void addView(bluecadet::views::BaseViewRef view);
 	bool findCat(vector<string>::iterator first, vector<string>::iterator last, string searched);
-
-	// Mouse & Touch
-	void	mouseDrag(MouseEvent event) ;
-	void	mouseDown(MouseEvent event) ;
-	void	mouseUp(MouseEvent event) ;
-	void	touchesBegan(TouchEvent event) ;
-	void	touchesMoved(TouchEvent event) ;
-	void	touchesEnded(TouchEvent event) ;
 
 
 	vector<Card*> allcards;
 	string categorie;
 	bool render;
+	bluecadet::views::BaseViewRef view;
 
 };
