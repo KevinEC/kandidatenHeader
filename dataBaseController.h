@@ -29,5 +29,8 @@ public:
 	void extractTitles(std::vector< std::pair<std::string, std::string> > & titles);
 	void extractBodies(std::vector< std::pair<std::string, std::string> > & bodyText);
 	void extractImgPaths(std::vector<std::string> & imgPath);
-	void extractCardCats(std::vector<std::vector<std::string> > & cardCategory); 
+	void extractCardCats(std::vector<std::vector<std::string> > & cardCategory);
+	void extractStorytitles(std::vector <std::string > & storytitles);
+	void extractstoryBodies(std::vector< std::pair<std::string, std::string> > &storybodies);
+	void extractstoryImgPaths(std::vector<std::string> & imgPath);
 };
