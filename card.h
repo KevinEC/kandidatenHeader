@@ -32,10 +32,9 @@ public:
 	~Card();
 	void update();
 	//State getcurrentstate();
-	void mouseDrag(MouseEvent event);
-	void mouseDown(MouseEvent event);
-	void mouseUp(MouseEvent event);
-
+	//void mouseDrag(MouseEvent event);
+	//void mouseDown(MouseEvent event);
+	//void mouseUp(MouseEvent event);
 //	void touchesBegan(TouchEvent event);
 //	void touchesMoved(TouchEvent event);
 //	void touchesEnded(TouchEvent event);
@@ -70,6 +69,11 @@ public:
     bool isScaled;
 
 	bluecadet::views::TouchViewRef object;
+
+    void	handleTouchBegan(const bluecadet::touch::TouchEvent& touchEvent);
+    void	handleTouchMoved(const bluecadet::touch::TouchEvent& touchEvent);
+    void	handleTouchEnded(const bluecadet::touch::TouchEvent& touchEvent);
+
 
 //	TouchEvent::Touch lastTouch;
 	bool twoTouches;
@@ -109,14 +113,6 @@ public:
 	void initElements();
 	void updateElementCoords();
 	void setStyles();
-	/*
-	string rubrik
-	string brödtext
-	img img1
-	img img2
-	taget från xml
-	*/
 
-	//State currentstate;
 };
 
