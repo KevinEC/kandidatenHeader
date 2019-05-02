@@ -5,6 +5,7 @@
 #include "bluecadet/core/BaseApp.h"
 #include "bluecadet/views/TouchView.h"
 #include "bluecadet/views/TextView.h"
+#include "bluecadet/views/ImageView.h"
 #include "cinder/Signals.h"
 
 using namespace bluecadet::core;
