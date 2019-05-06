@@ -20,8 +20,10 @@ public:
     glm::mat3 scaling(float size);
 
 	float * translate(const float x, const float y, const float mx, const float my, const bool isDragged);
+	glm::vec2 translate(const glm::vec2 pos, const glm::vec2 inputPoint);
 private:
 	//Animate animation = Animate();
 	float deltaX;
 	float deltaY;
+	glm::vec2 delta;
 };
