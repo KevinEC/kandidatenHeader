@@ -11,6 +11,13 @@
 
 #include "bluecadet/views/TouchView.h"
 #include "bluecadet/views/StrokedRoundedRectView.h"
+#include "bluecadet/views/TextView.h"
+#include "bluecadet/views/ImageView.h"
+#include "bluecadet/text/FontManager.h"
+#include "bluecadet/text/StyledTextParser.h"
+#include "bluecadet/text/StyledTextLayout.h"
+
+
 #include "bluecadet/core/BaseApp.h"
 
 
@@ -26,9 +33,10 @@ class Card
 {
 public:
 	Card();
-	Card(const float, const float, std::string title, std::string body);
+	Card(const float, const float, std::string title, std::string body, std::string imgPath);
 	~Card();
 	void update();
+	void draw();
 	//State getcurrentstate();
 	/*void mouseDrag(MouseEvent event);
 	void mouseDown(MouseEvent event);
@@ -62,11 +70,10 @@ public:
 	float y;
 	float width;
 	float height;
-	string title;
-	string subtitle;
-	string body;
-	//image img[];
-	//Rectf rect;
+	string titleText;
+	string subtitleText;
+	string bodyText;
+	string imgPath;
 	float cardSize;
 	int pathID;
 	bool isClicked;
@@ -92,36 +99,26 @@ public:
 	vec2 bodyCo;
 	vec2 tagsCo;
 
+	gl::TextureRef titleTexture;
+
 	Color bgColor;
 	Color borderColor;
 	float borderRadius;
-	ColorA textColor;
-	
-	DataSourceRef raleway;
-	DataSourceRef montserrat;
+	float borderWidth;
 
+	Color textColor;
 
 	float elementWidth;
 	float paddingX;
 
-	gl::TextureRef imgTex;
-	gl::TextureRef titleTex;
-	gl::TextureRef bodyTex;
-	gl::TextureRef tagsTex;
+	bluecadet::text::StyledTextLayoutRef titleTex;
 
 	void setpos(float m, float n);
-	gl::TextureRef renderTexture(TextBox &text);
+	gl::TextureRef renderTexture(bluecadet::text::StyledTextLayoutRef text);
 	void renderCard();
 	void initElements();
 	void updateElementCoords();
 	void setStyles();
-	/*
-	string rubrik
-	string brödtext
-	img img1
-	img img2
-	taget från xml
-	*/
 
 	//State currentstate;
 };
