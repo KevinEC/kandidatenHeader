@@ -13,6 +13,7 @@
 #include "bluecadet/views/StrokedRoundedRectView.h"
 #include "bluecadet/views/TextView.h"
 #include "bluecadet/views/ImageView.h"
+#include "bluecadet/views/MaskView.h"
 #include "bluecadet/text/FontManager.h"
 #include "bluecadet/text/StyledTextParser.h"
 #include "bluecadet/text/StyledTextLayout.h"
