@@ -11,25 +11,36 @@
 
 #include "bluecadet/views/TouchView.h"
 #include "bluecadet/views/StrokedRoundedRectView.h"
+#include "bluecadet/views/TextView.h"
+#include "bluecadet/views/ImageView.h"
+#include "bluecadet/views/MaskView.h"
+#include "bluecadet/text/FontManager.h"
+#include "bluecadet/text/StyledTextParser.h"
+#include "bluecadet/text/StyledTextLayout.h"
+
+
 #include "bluecadet/core/BaseApp.h"
 
 
 #include <iostream>
 #include <string>
+#include <math.h>
 
 using namespace ci;
 using namespace ci::app;
 using namespace std;
+
+using namespace bluecadet::views;
 
 //class for card.
 class Card
 {
 public:
 	Card();
-	Card(const float, const float, std::string title, std::string body);
+	Card(const float, const float, std::string title, std::string body, std::string imgPath);
 	~Card();
-	void update();
 
+	void handleTouchTapped(bluecadet::touch::TouchEvent* touchEvent);
 	void handleTouchBegan(bluecadet::touch::TouchEvent* touchEvent);
 	void handleTouchMoved(bluecadet::touch::TouchEvent* touchEvent);
 	void handleTouchEnded(bluecadet::touch::TouchEvent* touchEvent);
@@ -47,18 +58,15 @@ public:
     glm::mat3 scaleMat;
     glm::mat3 transMat;
     glm::mat3 rotMat;
-//    TouchEvent::Touch lastTouch;
-//    TouchEvent::Touch lastRotTouch;
 
 	float x;
 	float y;
 	float width;
 	float height;
-	string title;
-	string subtitle;
-	string body;
-	//image img[];
-	//Rectf rect;
+	string titleText;
+	string subtitleText;
+	string bodyText;
+	string imgPath;
 	float cardSize;
 	int pathID;
 	bool isClicked;
@@ -67,14 +75,18 @@ public:
 	bool isShown;
     bool isScaled;
 
-	bluecadet::views::TouchViewRef object;
+	// bluecadet views
+	TouchViewRef object;
+	StrokedRoundedRectViewRef border;
+	BaseViewRef contentBoxFront;
+	BaseViewRef contentBoxBack;
+	ImageViewRef image;
+	StrokedRoundedRectViewRef roundImgBorder;
+	MaskViewRef imgMask;
+	TextViewRef title;
+	TextViewRef body;
+	StrokedRoundedRectViewRef colorLayer;
 
-    void	handleTouchBegan(const bluecadet::touch::TouchEvent& touchEvent);
-    void	handleTouchMoved(const bluecadet::touch::TouchEvent& touchEvent);
-    void	handleTouchEnded(const bluecadet::touch::TouchEvent& touchEvent);
-
-
-//	TouchEvent::Touch lastTouch;
 	bool twoTouches;
 
 	Rectf rect;
@@ -84,34 +96,24 @@ public:
 //	void scaling(TouchEvent::Touch touch);
 //	void rotation(TouchEvent::Touch touch);
 
-	vec2 imgCo;
-	vec2 titleCo;
-	vec2 bodyCo;
-	vec2 tagsCo;
 
 	Color bgColor;
 	Color borderColor;
 	float borderRadius;
-	ColorA textColor;
-	
-	DataSourceRef raleway;
-	DataSourceRef montserrat;
+	float borderWidth;
 
+	Color textColor;
 
 	float elementWidth;
 	float paddingX;
 
-	gl::TextureRef imgTex;
-	gl::TextureRef titleTex;
-	gl::TextureRef bodyTex;
-	gl::TextureRef tagsTex;
-
-	void setpos(float m, float n);
-	gl::TextureRef renderTexture(TextBox &text);
-	void renderCard();
+	gl::TextureRef renderTexture(bluecadet::text::StyledTextLayoutRef text);
 	void initElements();
-	void updateElementCoords();
+	void toggleView();
+	bool flipped;
 	void setStyles();
+	void setFrontLayout();
+	void setBackLayout();
 
 };
 

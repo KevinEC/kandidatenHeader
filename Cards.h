@@ -13,8 +13,8 @@ public:
 	Cards();
 	Cards(string categorie);
 	~Cards();
-	vector<pair<string, Cards*>> categorize(vector<pair<string, string>>* titles, vector<pair<string, string>>* bodyText, vector<string>* categories, vector<vector<string>>* cardCat);
-	vector<pair<string, Cards*>>* sort(vector< pair<string, Cards*> >* sortedCards, vector<vector<string>>* cardCat,vector<pair<string, string >>* titles, vector<pair<string, string >>* bodyText);
+	vector<pair<string, Cards*>> categorize(vector<pair<string, string>>* titles, vector<pair<string, string>>* bodyText, vector<string>* imgPath, vector<string>* categories, vector<vector<string>>* cardCat);
+	vector<pair<string, Cards*>>* sort(vector< pair<string, Cards*> >* sortedCards, vector<vector<string>>* cardCat,vector<pair<string, string >>* titles, vector<pair<string, string >>* bodyText, vector<string>* imgPath);
 	void collision();
 	void setPath(Card &inst);
 	void search();
