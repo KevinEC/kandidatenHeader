@@ -24,6 +24,7 @@
 
 #include <iostream>
 #include <string>
+#include <math.h>
 
 using namespace ci;
 using namespace ci::app;
@@ -108,7 +109,6 @@ public:
 	float paddingX;
 
 	gl::TextureRef renderTexture(bluecadet::text::StyledTextLayoutRef text);
-	void renderCard();
 	void initElements();
 	void toggleView();
 	bool flipped;
