@@ -37,7 +37,7 @@ class Card
 {
 public:
 	Card();
-	Card(const float, const float, std::string title, std::string body, std::string imgPath);
+	Card(const float, const float, pair<string, string> title, pair<string, string> body, string imgPath);
 	~Card();
 
 	void handleTouchTapped(bluecadet::touch::TouchEvent* touchEvent);
