@@ -1,7 +1,5 @@
 #pragma once
 #include "Transform.h"
-#include "cinder/app/MouseEvent.h"
-#include "cinder/app/TouchEvent.h"
 #include "cinder/app/App.h"
 #include "cinder/Log.h"
 #include "cinder/Text.h"
@@ -32,18 +30,26 @@ public:
 	~Card();
 	void update();
 	//State getcurrentstate();
-	void mouseDrag(MouseEvent event);
+	/*void mouseDrag(MouseEvent event);
 	void mouseDown(MouseEvent event);
-	void mouseUp(MouseEvent event);
+	void mouseUp(MouseEvent event);*/
 
 //	void touchesBegan(TouchEvent event);
 //	void touchesMoved(TouchEvent event);
 //	void touchesEnded(TouchEvent event);
+
+	void handleTouchBegan(bluecadet::touch::TouchEvent* touchEvent);
+	void handleTouchMoved(bluecadet::touch::TouchEvent* touchEvent);
+	void handleTouchEnded(bluecadet::touch::TouchEvent* touchEvent);
 	float initFingDist;
+	map<int, bluecadet::touch::TouchEvent> activeTouches;
 
 	
-    vec2 initVec;
-//	vector<TouchEvent::Touch> activeTouchesOnCard;
+    float initDist;
+	float currDist;
+	float maxDist;
+	bool firstTouchPoint;
+	int firstTouchId;
     float angle;
     float initAngle;
     glm::mat3 scaleMat;
