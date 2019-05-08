@@ -19,10 +19,6 @@ public:
 	Story(Cards cards);
 	~Story();
 
-    void	handleTouchBegan(const bluecadet::touch::TouchEvent& touchEvent);
-    void	handleTouchMoved(const bluecadet::touch::TouchEvent& touchEvent);
-    void	handleTouchEnded(const bluecadet::touch::TouchEvent& touchEvent);
-
     bluecadet::views::TouchViewRef storyView;
 
 private:
