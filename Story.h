@@ -19,6 +19,8 @@ public:
 	Story(Cards cards);
 	~Story();
 
+	vector<pair<string, Cards*>> sort(vector<string>* titles, vector<pair<string, string>>* bodies, vector<string>* imgPaths);
+
     bluecadet::views::TouchViewRef storyView;
 
 private:
