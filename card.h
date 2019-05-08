@@ -29,14 +29,6 @@ public:
 	Card(const float, const float, std::string title, std::string body);
 	~Card();
 	void update();
-	//State getcurrentstate();
-	/*void mouseDrag(MouseEvent event);
-	void mouseDown(MouseEvent event);
-	void mouseUp(MouseEvent event);*/
-
-//	void touchesBegan(TouchEvent event);
-//	void touchesMoved(TouchEvent event);
-//	void touchesEnded(TouchEvent event);
 
 	void handleTouchBegan(bluecadet::touch::TouchEvent* touchEvent);
 	void handleTouchMoved(bluecadet::touch::TouchEvent* touchEvent);
@@ -55,8 +47,6 @@ public:
     glm::mat3 scaleMat;
     glm::mat3 transMat;
     glm::mat3 rotMat;
-//    TouchEvent::Touch lastTouch;
-//    TouchEvent::Touch lastRotTouch;
 
 	float x;
 	float y;
