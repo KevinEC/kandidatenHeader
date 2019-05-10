@@ -96,6 +96,7 @@ public:
 //	void scaling(TouchEvent::Touch touch);
 //	void rotation(TouchEvent::Touch touch);
 
+	void animateTranslate(const vec2 pos);
 
 	Color bgColor;
 	Color borderColor;
