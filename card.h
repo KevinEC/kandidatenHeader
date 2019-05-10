@@ -44,17 +44,20 @@ public:
 	void handleTouchBegan(bluecadet::touch::TouchEvent* touchEvent);
 	void handleTouchMoved(bluecadet::touch::TouchEvent* touchEvent);
 	void handleTouchEnded(bluecadet::touch::TouchEvent* touchEvent);
+	void inserttouchevent(bluecadet::touch::TouchEvent* touchEvent);
+	void removetouchevent(bluecadet::touch::TouchEvent* touchEvent);
 	float initFingDist;
-	map<int, bluecadet::touch::TouchEvent> activeTouches;
+	vector<bluecadet::touch::TouchEvent> activeTouches;
+	vector<vec2> currentpos;
+	bool hasbeentransformed;
+
+
 
 	
-    float initDist;
 	float currDist;
-	float maxDist;
-	bool firstTouchPoint;
-	int firstTouchId;
+
     float angle;
-    float initAngle;
+   // float initAngle;
     glm::mat3 scaleMat;
     glm::mat3 transMat;
     glm::mat3 rotMat;
@@ -87,6 +90,7 @@ public:
 	TextViewRef body;
 	StrokedRoundedRectViewRef colorLayer;
 
+	float lastanglechange;
 	bool twoTouches;
 
 	Rectf rect;
