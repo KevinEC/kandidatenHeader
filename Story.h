@@ -7,6 +7,7 @@
 #include "bluecadet/views/ImageView.h"
 #include "cinder/Signals.h"
 
+
 using namespace bluecadet::core;
 using namespace bluecadet::views;
 using namespace bluecadet::touch;
