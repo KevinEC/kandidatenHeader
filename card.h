@@ -90,6 +90,7 @@ public:
 	TextViewRef body;
 	StrokedRoundedRectViewRef colorLayer;
 
+	float lastanglechange;
 	bool twoTouches;
 
 	Rectf rect;
