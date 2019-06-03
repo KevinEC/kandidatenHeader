@@ -20,17 +20,17 @@ class Story
 {
 public:
 	Story(); //default constructor
-	Story(Cards* cards);
+	Story(string name, Cards* cards);
 	~Story();
 
 	void handleTouchBegan(const bluecadet::touch::TouchEvent* touchEvent);
 	void handleTouchMoved(const bluecadet::touch::TouchEvent* touchEvent);
 	void handleTouchEnded(const bluecadet::touch::TouchEvent* touchEvent);
 
-    void setUpCard(TouchViewRef view, int *offset, Card *card);
-    void setUpHeader(StrokedRoundedRectViewRef view, Card *card);
-    void setUpBody(StrokedRoundedRectViewRef view, Card *card);
-    void setUpImage(StrokedRoundedRectViewRef view, Card *card);
+    void setUpCard(TouchViewRef view, int *offset, Card *card, string name = "noTitle", Card *card2 = new Card());
+    void setUpHeader(StrokedRoundedRectViewRef view, string name);
+    void setUpBody(StrokedRoundedRectViewRef view, Card *card, Card *card2 = new Card());
+    void setUpImage(StrokedRoundedRectViewRef view, Card *card, Card *card2 = new Card());
 
     void swipeUp();
     void swipeDown();
@@ -46,6 +46,7 @@ private:
 
 	Cards* storyCards;
 	Transform transform;
+	string name;
 
 };
 
