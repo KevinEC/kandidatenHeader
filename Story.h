@@ -38,6 +38,7 @@ public:
 	vector<pair<string, Cards*>> sort(vector<string>* titles, vector<pair<string, string>>* bodies, vector<string>* imgPaths);
     
     bluecadet::views::TouchViewRef storyView;
+	vector<bluecadet::views::StrokedRoundedRectViewRef> storyViews;
     
     //Timer t;
     //Timers timer;
