@@ -33,8 +33,8 @@ public:
 
     bluecadet::views::TouchViewRef storyView;
     
-    Timer t;
-    Timers timer;
+    //Timer t;
+    //Timers timer;
 
 private:
 	Cards storyCards;
