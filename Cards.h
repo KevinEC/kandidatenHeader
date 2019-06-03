@@ -18,6 +18,7 @@ public:
 	void collision();
 	void setPath(Card &inst);
 	void search();
+	void tangLayout(const vec2 xy, const Rectf rect);
 
 	//Help functions
 	void addCard(Card *card);
@@ -29,22 +30,5 @@ public:
 	string categorie;
 	bool render;
 	bluecadet::views::BaseViewRef view;
-
-    static void translateCards(Cards & c, vec2 storyPos)
-    {
-        auto kids = c.view->getChildren();
-        CI_LOG_I("kids: " << kids.size());
-        /*
-        categorie.second->view->setSize(vec2{ 0.5f*windowSize.x, windowSize.y });
-        categorie.second->view->setGlobalPosition(ivec2{ 960,0 });
-        categorie.second->view->setTransformOrigin(0.5f * categorie.second->view->getSize());
-
-        auto kids = categorie.second->view->getChildren();
-        for (auto &kid : kids)
-        {
-            if (!(kid->isHidden())) kid->setScale(0.5); // scale kid
-        }
-        */
-    }
 
 };
