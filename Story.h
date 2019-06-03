@@ -27,10 +27,13 @@ public:
 	void handleTouchMoved(const bluecadet::touch::TouchEvent* touchEvent);
 	void handleTouchEnded(const bluecadet::touch::TouchEvent* touchEvent);
 
-    void setUpCard(TouchViewRef view, int *offset);
-    void setUpHeader(StrokedRoundedRectViewRef view);
-    void setUpBody(StrokedRoundedRectViewRef view);
-    void setUpImage(StrokedRoundedRectViewRef view);
+    void setUpCard(TouchViewRef view, int *offset, Card *card);
+    void setUpHeader(StrokedRoundedRectViewRef view, Card *card);
+    void setUpBody(StrokedRoundedRectViewRef view, Card *card);
+    void setUpImage(StrokedRoundedRectViewRef view, Card *card);
+
+    void swipeUp();
+    void swipeDown();
 
 	vector<pair<string, Cards*>> sort(vector<string>* titles, vector<pair<string, string>>* bodies, vector<string>* imgPaths);
     
